@@ -2,8 +2,13 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import {Link} from 'react-router-dom'
+import { usePostContext } from '../store/Store';
 
 export default function Header() {
+
+    const {isLogIn} = usePostContext();
+console.log(isLogIn);
+
     return (
         
             <nav className="navbar navbar-expand-lg  bg-body-tertiary" data-bs-theme="dark">
@@ -19,7 +24,7 @@ export default function Header() {
                             </li>
                             <li className="nav-item">
 
-                                <Link className="nav-link" href="/">Post ad</Link>
+                                <Link className="nav-link" to={"/postad"}>Post ad</Link>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link disabled" aria-disabled="true">Register (log in) to post an ad</a>
