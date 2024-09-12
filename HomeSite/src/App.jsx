@@ -12,7 +12,6 @@ function App() {
   return (
     <PostProvider>
       <LayOut>
-
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path='/login' element={<LogIn />} />

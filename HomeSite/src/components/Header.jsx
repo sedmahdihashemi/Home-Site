@@ -24,7 +24,8 @@ console.log(isLogIn);
                             </li>
                             <li className="nav-item">
 
-                                <Link className="nav-link" to={"/postad"}>Post ad</Link>
+
+                                <Link className={isLogIn?'nav-link  text-primary' : 'nav-link'} to={isLogIn ? '/postad' : '/'}>Post ad</Link>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link disabled" aria-disabled="true">Register (log in) to post an ad</a>
