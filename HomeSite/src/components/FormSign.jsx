@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router'
 import {toast , ToastContainer, Zoom} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 export default function FormSign() {
-const[user , setUser] = useState("")
+const[id , setId] = useState("")
 const[phone , setPhone] = useState("")
 const[email , setEmail] = useState("")
 const[password , setPassword] = useState("")
@@ -16,7 +16,7 @@ const subHandler = (e)=>{
     if(isValidate()){
 
     
-    let registerObj = {user , phone , email , password}
+    let registerObj = {id , phone , email , password}
     // console.log(registerObj);
     fetch('http://localhost:8000/users' , {
         method:"POST",
@@ -40,7 +40,7 @@ const subHandler = (e)=>{
 const isValidate = ()=>{
     let isProceed = true
     let errorMassage = 'Please enter the value in '
-    if(user === null || user === ''){
+    if(id === null || id === ''){
         isProceed = false
         errorMassage += ' userName '    
     }
@@ -72,7 +72,7 @@ const isValidate = ()=>{
                 <div className="col-12 mb-3 d-flex flex-wrap justify-content-between">
                     <div className='col-5'>
                         <label htmlFor="exampleInputUser" className="form-label">User Name</label>
-                        <input type="text" value={user} onChange={(e)=>setUser(e.target.value)} className="form-control" id="exampleInputUser" />
+                        <input type="text" value={id} onChange={(e)=>setId(e.target.value)} className="form-control" id="exampleInputUser" />
                     </div>
                    
                     <div className='col-5'>

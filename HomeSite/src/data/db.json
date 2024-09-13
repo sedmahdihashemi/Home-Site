@@ -109,6 +109,31 @@
       "phone": "9847465489",
       "email": "javad@gmail.com",
       "password": "1234"
+    },
+    {
+      "id": "6a18",
+      "user": "mahdi",
+      "phone": "09912525873",
+      "email": "3edmahdihashemi@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "gholi",
+      "phone": "789945465",
+      "email": "gholi@hdfjhd.com",
+      "password": "test"
+    },
+    {
+      "id": "adminUser",
+      "phone": "12345",
+      "email": "admin@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "alireza",
+      "phone": "456789",
+      "email": "alireza@gmail.com",
+      "password": "789"
     }
   ]
 }
