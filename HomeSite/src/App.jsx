@@ -6,6 +6,9 @@ import SignUp from './pages/SignUp'
 import PostAd from './pages/PostAd'
 import PostProvider from './store/Store'
 import LayOut from './components/LayOut.jsx'
+import {toast , ToastContainer, Zoom} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 function App() {
   
 
@@ -19,8 +22,11 @@ function App() {
       <Route path='/postad' element={<PostAd />} />
     </Routes>
       </LayOut>
+      <ToastContainer position='top-center' theme='colored' transition={Zoom}></ToastContainer>
     </PostProvider>
   )
 }
 
 export default App
+
+// npx json-server --watch HomeSite/src/data/db.json --port 8000
