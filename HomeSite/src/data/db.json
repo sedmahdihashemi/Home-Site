@@ -1,0 +1,11 @@
+{
+    "posts": [
+      { "id": "1", "title": "a title", "location": ""  },
+      { "id": "2", "title": "another title" , "location": "" }
+    ],
+    "users": [
+      { "id": "1", "usenName": "", "gmail":"", "phone":"", "password":""  },
+      { "id": "2",  "usenName": "", "gmail":"", "phone":"", "password":"" }
+    ]
+   
+  }

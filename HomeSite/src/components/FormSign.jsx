@@ -6,13 +6,10 @@ export default function FormSign() {
             <form className='col-9'>
                 <div className="col-12 mb-3 d-flex flex-wrap justify-content-between">
                     <div className='col-5'>
-                        <label htmlFor="exampleInputFirst" className="form-label">First Name </label>
-                        <input type="text" className="form-control" id="exampleInputFirst" />
+                        <label htmlFor="exampleInputUser" className="form-label">User Name</label>
+                        <input type="text" className="form-control" id="exampleInputUser" />
                     </div>
-                    <div className='col-5'>
-                    <label htmlFor="exampleInputLast" className="form-label">Last Name </label>
-                    <input type="text" className="form-control" id="exampleInputLast" />
-                    </div>
+                   
                     <div className='col-5'>
                     <label htmlFor="exampleInputphone" className="form-label">Phone Number</label>
                     <input type="text" className="form-control" id="exampleInputphone" />
