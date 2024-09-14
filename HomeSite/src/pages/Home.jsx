@@ -20,9 +20,14 @@ const [dataApi , setDataApi] = useState([])
 
   return (
     <div className='col-12 d-flex flex-wrap justify-content-around mt-5'>
-      <CartHome />
-      <CartHome />
-      <CartHome />
+
+      {
+        dataApi?.map((val , index)=>{
+          return <CartHome key={index} {...val} />
+        })
+      }
+      
+     
 
       <div className='col-12  d-flex justify-content-center pt-5'>
         <nav aria-label="Page navigation example ">

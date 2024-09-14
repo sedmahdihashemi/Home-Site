@@ -8,6 +8,7 @@ import PostProvider from './store/Store'
 import LayOut from './components/LayOut.jsx'
 import {toast , ToastContainer, Zoom} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import OneHome from './pages/OneHome.jsx'
 
 function App() {
   
@@ -20,6 +21,7 @@ function App() {
       <Route path='/login' element={<LogIn />} />
       <Route path='/signup' element={<SignUp />} />
       <Route path='/postad' element={<PostAd />} />
+      <Route path='/OneHome/:id' element={<OneHome />} />
     </Routes>
       </LayOut>
       <ToastContainer position='top-center' theme='colored' transition={Zoom}></ToastContainer>
