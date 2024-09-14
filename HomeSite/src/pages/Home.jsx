@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../components/Header'
 import { usePostContext } from '../store/Store';
 import CartHome from '../components/CartHome';
+import useApi from '../hook/useApi';
 
 export default function Home() {
   const { isLogIn } = usePostContext();
   console.log(isLogIn);
+const [dataApi , setDataApi] = useState([])
+
+  useEffect(()=>{
+    useApi().then(res =>
+    setDataApi(res))
+    
+
+  },[])
+  console.log(dataApi);
+  
 
   return (
     <div className='col-12 d-flex flex-wrap justify-content-around mt-5'>

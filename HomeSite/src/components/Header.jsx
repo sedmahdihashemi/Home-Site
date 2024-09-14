@@ -37,9 +37,21 @@ export default function Header() {
 
                             <Link className={isLogIn || sessionStorage.getItem('userName') != null ? 'nav-link  text-primary' : 'nav-link'} to={isLogIn || sessionStorage.getItem('userName') != null ? '/postad' : '/'}>Post ad</Link>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link disabled" aria-disabled="true">Register (log in) to post an ad</a>
-                        </li>
+                        {
+                            isLogIn == false && sessionStorage.getItem('userName') == null ?
+                            (
+                            <li className="nav-item">
+                                <a className="nav-link disabled" aria-disabled="true">Register (log in) to post an ad</a>
+                            </li>
+                            )
+                            :
+                            <>
+                            
+                            </>
+
+
+                        }
+                        
                     </ul>
                     <div className="d-flex" role="search">
                         {
