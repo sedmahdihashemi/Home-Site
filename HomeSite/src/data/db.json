@@ -4,7 +4,8 @@
       "id": "1",
       "title": "a title",
       "phone" :"79854",
-      "location": ["1785" , "782"],
+      "lat":13.084622,
+      "lng":80.248357,
       "address" :"tehran-street1",
       "desc":"my home is big"
     },
@@ -12,7 +13,8 @@
       "id": "2",
       "title": "another title",
       "phone" :"132564",
-      "location": ["716565" , "7874"],
+      "lat":"13.084622",
+      "lng":"80.248357",
       "address" :"tehran-street2",
       "desc":"my home is very good"
     },
@@ -20,7 +22,8 @@
       "id": "3",
       "title": "another title",
       "phone" :"89849",
-      "location": ["2100" , "8798"],
+      "lat":13.084622,
+      "lng":80.248357,
       "address" :"tehran-street3",
       "desc":"my home is blue"
     }

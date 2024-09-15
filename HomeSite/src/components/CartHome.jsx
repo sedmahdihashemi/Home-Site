@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-export default function CartHome({id,address,title}) {
-    // console.log(id);
+export default function CartHome({id,address,title,lat,lng}) {
+    console.log(lat);
+    console.log(lng);
     
     return (
         <>

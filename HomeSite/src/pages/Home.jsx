@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import { usePostContext } from '../store/Store';
 import CartHome from '../components/CartHome';
 import useApi from '../hook/useApi';
+import { json } from 'react-router';
 
 export default function Home() {
   const { isLogIn } = usePostContext();
