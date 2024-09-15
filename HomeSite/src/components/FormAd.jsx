@@ -1,16 +1,37 @@
 import React, { useState } from 'react'
 import Map from './Map'
 import { toast } from 'react-toastify'
+import { usePostContext } from '../store/Store'
+import { useNavigate } from 'react-router'
 
 export default function FormAd() {
 
-    const[tileInp , setTitleInp] = useState('')
+    const[titleInp , setTitleInp] = useState('')
     const[phoneInp , setPhoneInp] = useState('')
     const[addressInp , setAddressInp] = useState('')
     const[descInp , setDescInp] = useState('')
+    const {listMap , setListMap} = usePostContext()
+    const navigate = useNavigate()
     const adHandlerForm = (e)=>{
         e.preventDefault()
         if(isValide()){
+            let registerObj = {title:titleInp , phone:phoneInp , address:addressInp , desc:descInp,locationMap:listMap}
+            fetch('http://localhost:8000/posts',{
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json',
+                    
+                    },
+                    body:JSON.stringify(registerObj)
+
+            }).then(res =>{
+                toast.success('Register successfully')
+                navigate('/')
+                
+            }).catch(err=>{
+                toast.error('Faild'+err.massage)
+        
+            })
 
         }
 
@@ -19,7 +40,7 @@ export default function FormAd() {
     const isValide = ()=>{
         let valide = true
          let errorMassage = 'Please enter the value in '
-        if(tileInp == null || tileInp == ''){
+        if(titleInp == null || titleInp == ''){
             valide = false
             errorMassage += ' title ' 
         }
@@ -35,9 +56,18 @@ export default function FormAd() {
             valide = false
             errorMassage += ' title ' 
         }
+        if(listMap.length == 0){
+            valide = false
+            toast.warning('Please select one map')
+        }
+        if(listMap.length > 1){
+            valide = false
+            toast.warning('Please select one map')
+        }
         if(!valide){
             toast.warning(errorMassage)
         }
+       
         
 
          return valide
@@ -50,7 +80,7 @@ export default function FormAd() {
             </div>
             <div class="col-md-6">
                 <label htmlFor="inputPhone4" class="form-label">Phone</label>
-                <input onChange={(e) => setPhoneInp(e.target.value)} type="email" class="form-control" id="inputPhone4" />
+                <input onChange={(e) => setPhoneInp(e.target.value)} type="text" class="form-control" id="inputPhone4" />
             </div>
 
             <div class="col-12">
@@ -62,14 +92,14 @@ export default function FormAd() {
                 <input type="text" onChange={(e) => setDescInp(e.target.value)} class="form-control" id="inputDesc4" placeholder="Description" />
             </div>
             <div className='col-8 d-flex'>
-            <Map />
             <h4 className='col-6 ms-3'>select your location</h4>
+            <Map />
             </div>
 
 
 
             <div class="col-12">
-                <button type="submit" class="btn btn-primary">Sign in</button>
+                <button type="submit" class="btn btn-primary">new Ad</button>
             </div>
 
             

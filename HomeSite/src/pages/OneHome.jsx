@@ -17,7 +17,7 @@ export default function OneHome() {
 
     return (
       <div className='col-8 mt-4 d-flex justify-content-center'>
-          <div class="card col-5 overflow-hidden bg-success " >
+          <div class="card col-5 overflow-hidden  " >
             <Map {...oneData} />
                 <div class="card-body">
                     <h5 class="card-title">Card title : {oneData.title}</h5>

@@ -7,8 +7,9 @@ export const usePostContext = () =>{
 
 export default function postProvider({children}){
 const [isLogIn , setIsLogIn] = useState(false)
+const [listMap , setListMap] = useState([])
     return (
-        <postHomeContext.Provider value={{isLogIn,setIsLogIn}}>
+        <postHomeContext.Provider value={{isLogIn,setIsLogIn,listMap , setListMap}}>
             {children}
         </postHomeContext.Provider>
     )
