@@ -27,7 +27,7 @@ const[isClick , setIsClick] = useState(1)
 
   return (
     <div  className='col-12 overflow-hidden bg-primary' style={{ height: '350px' }}>
-      <MapContainer  center={center} className='col-12 h-100' scrollWheelZoom={false} zoom={12} mapRef={mapRef}>
+      <MapContainer  center={center} className='col-12 h-100' scrollWheelZoom={false} zoom={10} mapRef={mapRef}>
         <TileLayer
           url={'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'}
           attribution={'&copy; <a href="https://www.maptiler.com/">maptiler</a> contributors'}

@@ -32,6 +32,10 @@ const[end , setEnd] = useState(3)
       setStart(6)
       setEnd(9)
     }
+    if(what.target.innerHTML === '4'){
+      setStart(9)
+      setEnd(12)
+    }
     
 
   }
@@ -52,9 +56,13 @@ const[end , setEnd] = useState(3)
         <nav aria-label="Page navigation example ">
           <ul className="pagination justify-content-end">
 
-            <li className="page-item"><a onClick={(e)=>paginationHandlre(e)} className="page-link">1</a></li>
-            <li className="page-item"><a onClick={(e)=>paginationHandlre(e)} className="page-link">2</a></li>
-            <li className="page-item"><a onClick={(e)=>paginationHandlre(e)} className="page-link">3</a></li>
+            <li className="page-item"><a onClick={(e)=>paginationHandlre(e)} className="btn btn-outline-primary page-link">1</a></li>
+            <li className="page-item"><a onClick={(e)=>paginationHandlre(e)} className="btn btn-outline-primary page-link">2</a></li>
+            <li className="page-item"><a onClick={(e)=>paginationHandlre(e)} className="btn btn-outline-primary page-link">3</a></li>
+            {
+              dataApi.length > 9 &&
+            <li className="page-item"><a onClick={(e)=>paginationHandlre(e)} className="btn btn-outline-primary page-link">4</a></li>
+            }
 
           </ul>
         </nav>
