@@ -9,5 +9,7 @@ we first
 
 ![Screenshot (44)](https://github.com/user-attachments/assets/59ca178d-cd6e-473c-a7c5-2e30a68c9bfa)
 
+3-Login with username:adminUser  Password:1234
 
+or signUp
 
