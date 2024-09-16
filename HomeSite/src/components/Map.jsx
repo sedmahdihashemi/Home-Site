@@ -7,18 +7,19 @@ import { useParams } from 'react-router';
 import { FaLocationDot } from "react-icons/fa6";
 import MarkerMap from './MarkerMap';
 import { usePostContext } from '../store/Store';
+import MarkerMapSave from './MarkerMapSave';
 
-export default function Map({ lat = 0 , lng = 0 , id }) {
+export default function Map({ locationMap , id }) {
 //   const [center, setCenter] = useState({ lat, lng });
 const param = useParams()
 const [center, setCenter] = useState({ "lat":35.6919,"lng":51.3880});
 const mapRef = useRef()
 const {listMap , setListMap} = usePostContext()
-console.log(listMap.length);
+// console.log(listMap.length);
 
 const[locationList , setLocationList] = useState([])
 const[isClick , setIsClick] = useState(1)
-console.log(locationList);
+// console.log(locationList);
 
 
 
@@ -35,7 +36,7 @@ console.log(locationList);
             param.id == undefined   ?
             <MarkerMap  center={center} locationList={locationList} setLocationList={setLocationList}  />
             :
-            <h3>5</h3>
+            <MarkerMapSave locationMap={locationMap} />
 
         }
       </MapContainer>

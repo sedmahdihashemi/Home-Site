@@ -20,14 +20,6 @@ export default function MarkerMap({ center, locationList, setLocationList }) {
             
     })
 
-    
-   
-
-
-
-
-
-
     return (
         <>
             {
@@ -38,6 +30,7 @@ export default function MarkerMap({ center, locationList, setLocationList }) {
 
 
             }
+            {/* <Marker position={[]} icon={markerIcon} /> */}
 
         </>
     )
